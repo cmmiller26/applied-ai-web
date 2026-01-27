@@ -68,13 +68,16 @@ export default async function Home() {
   ];
 
   const episodes = [
-    {
-      num: "01",
-      title: "Prompting for Reliable Outputs",
-      minutes: "18 min",
-      tag: "Prompting",
-      desc: "Turn vague prompts into consistent, structured results.",
-    },
+    const episodes = [
+  {
+    num: "01",
+    title: "Prompting for Reliable Outputs",
+    minutes: "8 min",
+    tag: "Prompting",
+    desc: "Turn vague prompts into consistent, structured results.",
+    url: "https://creators.spotify.com/pod/profile/maheeshah/episodes/Prompting-for-Reliable-Outputs-e3e9c62/a-acej63j"
+  },
+  
     {
       num: "02",
       title: "From Form → GPT → Email",
@@ -252,13 +255,16 @@ export default async function Home() {
                     key={e.num}
                     className="flex items-start gap-4 rounded-2xl border border-yellow-500/20 bg-black/40 p-5 shadow-lg shadow-black/20"
                   >
-                    <button
-                      type="button"
-                      className="mt-1 flex h-10 w-10 items-center justify-center rounded-full border border-yellow-500/30 text-yellow-200 hover:bg-yellow-400/10"
-                      aria-label={`Play episode ${e.num}`}
-                    >
-                      ▶
-                    </button>
+                    <a
+                    href={e.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-1 flex h-10 w-10 items-center justify-center rounded-full border border-yellow-500/30 text-yellow-200 hover:bg-yellow-400/10 transition"
+                    aria-label={`Listen to episode ${e.num}`}
+                  >
+            ▶
+    </a>
+
 
                     <div className="flex-1">
                       <div className="flex flex-wrap items-center gap-2">
@@ -279,12 +285,15 @@ export default async function Home() {
                       <p className="mt-1 text-gray-200">{e.desc}</p>
                     </div>
 
-                    <Link
-                      href="/tutorials"
-                      className="text-sm font-medium text-yellow-300 hover:text-yellow-200"
-                    >
-                      View
-                    </Link>
+                    <a
+  href={e.url}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="text-sm font-medium text-yellow-300 hover:text-yellow-200"
+>
+  Listen
+</a>
+
                   </div>
                 ))}
               </div>
