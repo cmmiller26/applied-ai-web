@@ -9,7 +9,7 @@ export default function Header() {
         {/* Brand */}
         <Link href="/" className="flex items-center gap-3">
           <Image
-            src="/logo.svg" // put your logo in /public and name it logo.png (or change this path)
+            src="/aailogo.png" // put your logo in /public and name it logo.png (or change this path)
             alt="Applied AI Logo"
             width={40}
             height={40}
